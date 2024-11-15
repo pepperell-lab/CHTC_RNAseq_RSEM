@@ -1,9 +1,6 @@
 # pepperell_lab_STAR_RSEM_Pipeline
 Normalized count from the pipeline: Fastqc-Trim-Fastqc-STAR-RSEM
 
-## Pipeline Visualization
-![Pipeline Made by Kadee](./CHTC_RNAseqData_Organization.png)
-
 ## Required Files
 
 To run the pipeline, the following files are needed:
@@ -65,5 +62,9 @@ To create and build Docker images for STAR and RSEM, follow these steps. For mor
    docker push marissazhang/rsem:latest
    docker push marissazhang/star:latest
    ```
+## Pipeline Visualizations
+![RNAseq_Pipeline_RSEM](https://github.com/user-attachments/assets/294e99b7-e74a-4bb1-a823-26f487687a0f)
+![Pipeline Made by Kadee](./CHTC_RNAseqData_Organization.png)
+
 ## Reference
 https://link.springer.com/protocol/10.1007/978-1-4939-4035-6_14
