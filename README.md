@@ -2,7 +2,7 @@
 Normalized count from the pipeline: Fastqc-Trim-Fastqc-STAR-RSEM
 
 ## Pipeline Visualization
-![Pipeline Made by Kadee](./RNAseq_CHTC_Pipelines.png )
+![Pipeline Made by Kadee](./CHTC_RNAseqData_Organization.png)
 
 ## Required Files
 
