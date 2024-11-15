@@ -1,4 +1,4 @@
-# pepperell_lab_STAR_RSEM_Pipeline
+# Pepperell_Lab_STAR_RSEM_Pipeline
 Normalized count from the pipeline: Fastqc-Trim-Fastqc-STAR-RSEM
 
 ## Required Files
