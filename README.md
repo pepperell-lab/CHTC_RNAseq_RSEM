@@ -63,7 +63,7 @@ To create and build Docker images for STAR and RSEM, follow these steps. For mor
    docker push marissazhang/star:latest
    ```
 ## Pipeline Visualizations
-![RNAseq_Pipeline_RSEM](https://github.com/user-attachments/assets/294e99b7-e74a-4bb1-a823-26f487687a0f)
+![RNAseq_Pipeline_RSEM](https://github.com/user-attachments/assets/6cbe56d3-f1e4-4207-b98b-cca47853c0a7)
 ![Pipeline Made by Kadee](./CHTC_RNAseqData_Organization.png)
 
 ## Reference
