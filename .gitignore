@@ -1,0 +1,12 @@
+*.fa
+*.gtf
+*.bam
+*.fastq.gz
+*.dag
+*.txt
+*.isoforms.results
+*.out
+*.err
+*.log
+*.dag*
+
