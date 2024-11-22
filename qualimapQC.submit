@@ -17,7 +17,7 @@ staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM
 results_staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results
 multiqc_staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/MultiQC
 
-transfer_input_files = $(results_staging_prefix)/$(RUN).sort.bam, $(staging_prefix)/$(ANNOT_GTF)
+transfer_input_files = $(results_staging_prefix)/$(RUN)_Aligned.sortedByCoord.out.bam , $(staging_prefix)/$(ANNOT_GTF)
 transfer_output_files = $(RUN).qualimap.tar.gz
 transfer_output_remaps = "$(RUN).qualimap.tar.gz = $(QC_staging_prefix)/$(RUN).qualimap.tar.gz"
 
