@@ -18,8 +18,8 @@ results_staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM/
 multiqc_staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/MultiQC
 
 transfer_input_files = STAR.sh, clear_space.py, $(results_staging_prefix)/$(RUN)_1P.fq.gz, $(results_staging_prefix)/$(RUN)_2P.fq.gz, $(staging_prefix)/$(REF), $(staging_prefix)/$(ANNOT_GTF)
-transfer_output_files = $(RUN)_Aligned.toTranscriptome.out.bam
-transfer_output_remaps = "$(RUN)_Aligned.toTranscriptome.out.bam = $(results_staging_prefix)/$(RUN)_Aligned.toTranscriptome.out.bam"
+transfer_output_files = $(RUN)_Aligned.toTranscriptome.out.bam, $(RUN)_Aligned.sortedByCoord.out.bam
+transfer_output_remaps = "$(RUN)_Aligned.toTranscriptome.out.bam = $(results_staging_prefix)/$(RUN)_Aligned.toTranscriptome.out.bam; $(RUN)_Aligned.sortedByCoord.out.bam = $(results_staging_prefix)/$(RUN)_Aligned.sortedByCoord.out.bam"
 
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
