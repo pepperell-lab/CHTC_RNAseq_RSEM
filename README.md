@@ -10,10 +10,10 @@ This document outlines the pipeline for generating normalized counts using the f
 
 To run the pipeline, the following files are needed:
 
-- **Reference File:** `MtbNCBIH37Rv.fa`
-- **Adapter File:** `adapters.fa`
-- **GTF File:** `MtbNCBIH37Rv_ncRNAs_sORFs.gtf`
-- **Data Files:** Raw sequencing reads
+- **Reference File:** like `MtbNCBIH37Rv.fa`
+- **Adapter File:** like `adapters.fa`
+- **GTF File:** like `MtbNCBIH37Rv_ncRNAs_sORFs.gtf`
+- **Data Files:** Raw sequencing reads like
   - `3151_19_S13_R1_001.fastq.gz`
   - `3151_19_S13_R2_001.fastq.gz`
 - **Input File:** `input.txt` (contains sample identifiers, one per line)
@@ -38,7 +38,27 @@ The pipeline uses HTcondor DAG files to manage the workflow. These files are aut
   ```bash
   python3 make_TPM_dag.py input.txt TPM_dag.template MtbNCBIH37Rv.fa MtbNCBIH37Rv_ncRNAs_sORFs.gtf
   ```
-  
+
+## Submitting and Watching a DAG Job
+
+To submit the DAG job described in `input_topLevel.dag` on CHTC, use the following command:
+
+```sh
+condor_submit_dag input_topLevel.dag
+```
+
+To check the status of a DAG job on HTCondor, use the following command:
+
+```sh
+condor_q -nobatch
+``` 
+
+To lively check and check the status of a DAG job on HTCondor instead of repeatedly querying, use the following command:
+
+```sh
+condor_watch_q
+``` 
+
 ## Documentation: how to Build STAR/RSEM Dockerfile(Only if Docker image)
 To create and build Docker images for STAR and RSEM, follow these steps. For more details, refer to the [CHTC Docker Build Guide](https://chtc.cs.wisc.edu/uw-research-computing/docker-build.html). Replace `<username>`, `<imagename>`, and `<tag>` with your DockerHub username, image name, and desired tag, respectively.
 
