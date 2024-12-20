@@ -53,7 +53,7 @@ To check the status of a DAG job on HTCondor, use the following command:
 condor_q -nobatch
 ``` 
 
-To lively check and check the status of a DAG job on HTCondor instead of repeatedly querying, use the following command:
+To lively check and watch the status of a DAG job on HTCondor instead of repeatedly querying, use the following command:
 
 ```sh
 condor_watch_q
