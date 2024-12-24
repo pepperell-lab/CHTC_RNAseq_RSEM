@@ -24,7 +24,7 @@ VARS qc RUN="${run}"
 VARS qc ANNOT_GTF="${annot_gtf}"
 
 JOB cleanup dummy.submit NOOP
-# SCRIPT POST cleanup /bin/rm /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/${run}.sort.bam.gz /bin/rm /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/${run}_Aligned.toTranscriptome.out.bam
+SCRIPT POST cleanup /bin/rm /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/${run}_Aligned.sortedByCoord.out.bam /bin/rm /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/${run}_Aligned.toTranscriptome.out.bam
 
 PARENT fastqc CHILD trim
 PARENT trim CHILD fastqc2
