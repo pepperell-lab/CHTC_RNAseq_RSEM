@@ -19,7 +19,7 @@ multiqc_staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM/
 
 transfer_input_files = $(results_staging_prefix)/$(RUN)_Aligned.sortedByCoord.out.bam , $(staging_prefix)/$(ANNOT_GTF)
 transfer_output_files = $(RUN).qualimap.tar.gz
-transfer_output_remaps = "$(RUN).qualimap.tar.gz = $(QC_staging_prefix)/$(RUN).qualimap.tar.gz"
+transfer_output_remaps = "$(RUN).qualimap.tar.gz = $(multiqc_staging_prefix)/$(RUN).qualimap.tar.gz"
 
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
