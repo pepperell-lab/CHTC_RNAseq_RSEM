@@ -24,7 +24,7 @@ transfer_output_remaps = "$(RUN).isoforms.results = $(results_staging_prefix)/$(
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
 request_cpus = 1
-request_memory = 10GB
-request_disk = 10GB
+request_memory = 25GB
+request_disk = 30GB
 
 queue
