@@ -10,16 +10,8 @@ log = trimmomatic_$(RUN).log
 
 # Rules to transfer and transferring files
 transfer_executable = TRUE
-should_transfer_files = YES
-when_to_transfer_output = ON_EXIT
-
-staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM
-results_staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results
-multiqc_staging_prefix = file:///staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/MultiQC
-
-transfer_input_files = $(staging_prefix)/$(RUN)_R1_001.fastq.gz , $(staging_prefix)/$(RUN)_R2_001.fastq.gz, $(staging_prefix)/adapters.fa
-transfer_output_files = $(RUN)_1P.fq.gz, $(RUN)_2P.fq.gz
-transfer_output_remaps = "$(RUN)_1P.fq.gz = $(results_staging_prefix)/$(RUN)_1P.fq.gz; $(RUN)_2P.fq.gz = $(results_staging_prefix)/$(RUN)_2P.fq.gz"
+should_transfer_files = IF_NEEDED
+transfer_output_files = ""
 
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
