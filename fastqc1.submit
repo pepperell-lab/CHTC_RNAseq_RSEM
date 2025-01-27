@@ -10,7 +10,8 @@ log = fastqc1_$(RUN).log
 
 # Rules to transfer and transferring files
 transfer_executable = TRUE
-should_transfer_files = NO
+should_transfer_files = IF_NEEDED
+transfer_output_files = ""
 
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
