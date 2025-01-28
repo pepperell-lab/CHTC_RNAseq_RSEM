@@ -1,5 +1,9 @@
 #!/bin/bash
 
+staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM
+results_staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results
+multiqc_staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/MultiQC
+
 # Note: Shell variables assignment cannot have space
 BAM=$1_Aligned.toTranscriptome.out.bam
 GENOME=$2
@@ -18,3 +22,5 @@ rsem-prepare-reference --gtf $ANNOTATION $GENOME $RSEMgenomeDir/RSEMref
 rsem-calculate-expression --bam --no-bam-output --estimate-rspd \
                         --calc-ci --seed 12345 -p $nThreadsRSEM --ci-memory 30000 --paired-end \
                         --forward-prob 0 $BAM $RSEMgenomeDir/RSEMref $1
+
+mv $1.isoforms.results $results_staging_prefix/

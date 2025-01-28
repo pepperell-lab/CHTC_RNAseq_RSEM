@@ -1,4 +1,8 @@
 #!/bin/bash
+staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM
+results_staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results
+
+cp $results_staging_prefix/$1_1P.fq.gz $results_staging_prefix/$1_2P.fq.gz $staging_prefix/$2 $staging_prefix/$3 ./
 
 # Note: Shell variables assignment cannot have space
 # Input files are output files of trim
@@ -26,3 +30,8 @@ STAR --genomeDir $STARgenomeDir --readFilesIn $read1 $read2 \
                         --outFilterIntronMotifs RemoveNoncanonical --runThreadN $nThreadsSTAR \
                         --quantMode TranscriptomeSAM --outWigType bedGraph --outWigStrand Stranded \
                         --limitBAMsortRAM 1207111982  --outFileNamePrefix $1_
+
+mv $1_Aligned.toTranscriptome.out.bam $results_staging_prefix/
+mv $1_Aligned.sortedByCoord.out.bam $results_staging_prefix/
+
+rm $results_staging_prefix/$1_1P.fq.gz $results_staging_prefix/$1_2P.fq.gz $staging_prefix/$2 $staging_prefix/$3
