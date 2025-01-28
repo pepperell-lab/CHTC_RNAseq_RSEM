@@ -3,6 +3,7 @@
 staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM
 results_staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results
 multiqc_staging_prefix=/staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/MultiQC
+cp $staging_prefix/$2 $staging_prefix/$3 $results_staging_prefix/$1_Aligned.toTranscriptome.out.bam ./
 
 # Note: Shell variables assignment cannot have space
 BAM=$1_Aligned.toTranscriptome.out.bam
