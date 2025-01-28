@@ -41,10 +41,10 @@ The pipeline uses HTcondor DAG files to manage the workflow. These files are aut
 
 ## Submitting and Watching a DAG Job
 
-To submit the DAG job described in `input_topLevel.dag` on CHTC, use the following command:
+To submit the DAG job described in `input_TPM_topLevel.dag` on CHTC, use the following command:
 
 ```sh
-condor_submit_dag input_topLevel.dag
+condor_submit_dag input_TPM_topLevel.dag
 ```
 
 To check the status of a DAG job on HTCondor, use the following command:
