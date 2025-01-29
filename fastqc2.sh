@@ -7,5 +7,3 @@ fastqc $1_1P.fq.gz $1_2P.fq.gz -t 4
 
 mv $1_1P_fastqc.zip $multiqc_staging_prefix/
 mv $1_2P_fastqc.zip $multiqc_staging_prefix/
-
-rm $1_1P.fq.gz $1_2P.fq.gz

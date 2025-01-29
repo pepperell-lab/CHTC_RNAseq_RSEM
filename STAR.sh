@@ -34,4 +34,4 @@ STAR --genomeDir $STARgenomeDir --readFilesIn $read1 $read2 \
 mv $1_Aligned.toTranscriptome.out.bam $results_staging_prefix/
 mv $1_Aligned.sortedByCoord.out.bam $results_staging_prefix/
 
-rm $results_staging_prefix/$1_1P.fq.gz $results_staging_prefix/$1_2P.fq.gz $staging_prefix/$2 $staging_prefix/$3
+rm $results_staging_prefix/$1_1P.fq.gz $results_staging_prefix/$1_2P.fq.gz

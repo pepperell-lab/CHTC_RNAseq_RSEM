@@ -3,7 +3,6 @@ VARS fastqc RUN="${run}"
 
 JOB trim trimmomatic.submit
 VARS trim RUN="${run}"
-SCRIPT POST trim /bin/rm /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/${run}_R1_001.fastq.gz /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/${run}_R2_001.fastq.gz
 
 JOB fastqc2 fastqc2.submit
 VARS fastqc2 RUN="${run}"
@@ -12,7 +11,6 @@ JOB star STAR.submit
 VARS star RUN="${run}"
 VARS star REF="${ref}"
 VARS star ANNOT_GTF="${annot_gtf}"
-SCRIPT POST star /bin/rm /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/${run}_1P.fq.gz /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/Results/${run}_2P.fq.gz
 
 JOB rsem RSEM.submit
 VARS rsem RUN="${run}"

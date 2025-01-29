@@ -7,5 +7,3 @@ fastqc $1_R1_001.fastq.gz $1_R2_001.fastq.gz -t 4
 
 mv $1_R1_001_fastqc.zip $multiqc_staging_prefix/
 mv $1_R2_001_fastqc.zip $multiqc_staging_prefix/
-
-rm $1_R1_001.fastq.gz $1_R2_001.fastq.gz
