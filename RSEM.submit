@@ -18,7 +18,7 @@ transfer_input_files = RSEM.sh, clear_space.py
 # Resource request and Queue job
 requirements = (Target.HasCHTCStaging==TRUE)
 request_cpus = 1
-request_memory = 30GB
-request_disk = 35GB
+request_memory = 35GB
+request_disk = 40GB
 
 queue
