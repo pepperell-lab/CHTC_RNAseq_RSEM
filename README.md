@@ -19,7 +19,7 @@ To run the pipeline, the following files are needed:
   - **Preprocessing Step:** Rename raw FASTQ files to follow `*_R1_001.fastq.gz` and `*_R2_001.fastq.gz`.
   
     **Steps:**
-    1. Navigate to the appropriate `data` folder. For example:
+    1. Navigate to the appropriate data folder. For example:
        ```bash
        cd /staging/groups/pepperell_group/Mtb_RNAseq/HTSeqCounts/
        # or
