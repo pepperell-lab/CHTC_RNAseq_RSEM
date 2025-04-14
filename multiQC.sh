@@ -13,4 +13,5 @@ multiqc -ds .
 
 mv multiqc_report.html multiqc_data/
 mv multiqc_data/ multiqc-report
-tar -czvf ${GROUP}-multiqc-report.tar.gz multiqc-report/
+mv multiqc-report ${GROUP}-RSEM-multiqc-report
+tar -czvf ${GROUP}-RSEM-multiqc-report.tar.gz ${GROUP}-RSEM-multiqc-report/
