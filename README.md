@@ -16,6 +16,20 @@ To run the pipeline, the following files are needed:
 - **Data Files:** Raw sequencing reads like
   - `3151_19_S13_R1_001.fastq.gz`
   - `3151_19_S13_R2_001.fastq.gz`
+  - **Preprocessing Step:** Rename raw FASTQ files to follow `*_R1_001.fastq.gz` and `*_R2_001.fastq.gz`.
+  
+    **Steps:**
+    1. Navigate to the appropriate `data` folder. For example:
+       ```bash
+       cd /staging/groups/pepperell_group/Mtb_RNAseq/HTSeqCounts/
+       # or
+       cd /staging/groups/pepperell_group/Mtb_RNAseq/RSEM/
+       ```
+  
+    2. Run the renaming script:
+       ```bash
+       ./format_fastqc_name.sh
+       ```
 - **Input File:** `input.txt` (contains sample identifiers, one per line)
     ```plaintext
     3151_17_S11
